@@ -18,9 +18,39 @@ class NotificationService extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: Center(child: Text(NotificationServiceHelper.token ?? "")),
+      home: HomePage(), // Wrap the initial page in a Navigator
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: ElevatedButton(
+          child: const Text('Go to Token Screen'),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => TokenScreen()),
+            );
+          },
+        ),
       ),
+    );
+  }
+}
+
+class TokenScreen extends StatelessWidget {
+  const TokenScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(child: Text(NotificationServiceHelper.token ?? "")),
     );
   }
 }
