@@ -1,16 +1,32 @@
-# notification_service
+# you can use final service notification class only ( last update ):
+# Firebase Notification Handler
 
-A new Flutter project.
+A comprehensive Flutter utility class for handling Firebase Cloud Messaging (FCM) notifications with local notifications support for both Android and iOS platforms.
 
-## Getting Started
+## 📋 Overview
 
-This project is a starting point for a Flutter application.
+This class provides a complete solution for handling push notifications in Flutter applications using Firebase Cloud Messaging. It manages foreground, background, and terminated state notifications with proper local notification display.
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Firebase Cloud Messaging Integration**: Seamless integration with FCM
+- **Local Notifications**: Display notifications using flutter_local_notifications
+- **Foreground Handling**: Process messages when app is open
+- **Background Handling**: Process messages when app is in background
+- **Token Management**: Automatic token retrieval and refresh handling
+- **Permission Handling**: Request notification permissions from users
+- **Cross-Platform Support**: Android and iOS compatibility
+- **Error Handling**: Comprehensive error logging and handling
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📦 Installation
+
+### Dependencies
+
+Add these to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  firebase_core: ^2.24.0
+  firebase_messaging: ^14.7.0
+  flutter_local_notifications: ^16.3.0
+  
